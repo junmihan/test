@@ -1,0 +1,66 @@
+<view class='commentContent'>
+	<view
+		wx:for="{{comment}}"
+		style='border: 1px solid rgba(0, 0, 0, .1)'>
+		<view
+			style='flex-direction: column;display: flex'
+			bindtap='onCommentDetail'
+			data-index='{{item.comment_id}}'>
+			<view
+				style='flex-direction: row;display: flex'
+				class='title'>
+				<image
+					class='userImage'
+					src='{{item.user_images_url}}'></image>
+				<view
+					style='flex-direction: column;width:450rpx;display: flex;margin-top: 20rpx;margin-left: 40rpx'>
+					<text style='font-size: 40rpx;color: #007AFF'>{{item.comment_user_name}}</text>
+					<text style='font-size: 20rpx;color: grey'>{{item.comment_post_time}}</text>
+				</view>
+			</view>
+			<view style='margin-left: 160rpx;margin-bottom: 30rpx'>
+				<text>{{item.comment_content}}</text>
+			</view>
+			<view style='margin-bottom: 30rpx'>
+				<view
+					wx:for="{{item.answers}}"
+					style='background-color: #F6F6F6;margin-left: 160rpx;margin-right: 40rpx'>
+					<view style='flex-direction: column;background-color: #F6F6F6'>
+						<view style='flex-direction: row'>
+							<text style='white-space: pre;color: #007AFF'>{{item.passtiveUser_name}}  </text>
+							<text>回复</text>
+							<text style='white-space: pre;color: #007AFF'> {{item.commentUser_name}}</text>
+						</view>
+						<text style='margin-top: 20rpx'>{{item.answer_content}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view
+		wx:if='{{comment.length}}'
+		style='text-align:center;font-size:30rpx;margin-top:20rpx'>
+		<text>没有更多了</text>
+	</view>
+</view>
+<view
+	style='display:flex;flex-direction: row'
+	class='bottomBar'>
+	<input
+		confirm-type='send'
+		placeholder='发起评论'
+		placeholder-style='color: grey'
+		style='width: 540rpx;background-color: white;margin-left: 20rpx;margin-top: 25rpx'
+		bindconfirm='onSendComment'
+		value='{{usrComment}}'></input>
+	<image
+		src='{{detail.isCollection?starSelectSrc:starSrc}}'
+		data-star='{{detail.isCollection}}'
+		style='height: 65rpx;width: 65rpx;margin-left: 40rpx;margin-top: 20rpx'
+		bindtap='onStarThis'></image>
+	<image
+		src='{{detail.isPraise?likeSelectSrc:likeSrc}}'
+		data-like='{{detail.isPraise}}'
+		style='height: 55rpx;width: 60rpx;margin-left: 40rpx;margin-top: 25rpx;margin-right: 40rpx'
+		bindtap='onLikeThis'></image>
+</view>

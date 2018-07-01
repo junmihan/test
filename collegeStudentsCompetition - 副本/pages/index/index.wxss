@@ -1,0 +1,13 @@
+/**index.wxss**/
+page {
+    background: #F6F6F6;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.Essay{
+    background: #FFFFFF;
+}
+.content{
+  margin-bottom: 80rpx;
+}

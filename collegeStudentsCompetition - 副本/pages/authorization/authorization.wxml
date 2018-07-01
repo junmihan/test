@@ -1,0 +1,7 @@
+<view style='width: 100%'>
+	<button
+		open-type="getUserInfo"
+		lang="zh_CN"
+		bindgetuserinfo="onGotUserInfo"
+		style='background-color:#eef5db'>同意获取昵称头像等信息</button>
+</view>

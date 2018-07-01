@@ -1,0 +1,51 @@
+<view
+	class="userinfo"
+	bindtap="login">
+	<image
+		class="userinfo-avatar"
+		src="{{logged ? userInfo.avatarUrl : 'images/user-unlogin.png'}}"
+		background-size="cover"></image>
+	<text class="userinfo-nickname">{{logged ? userInfo.nickName : '点击登录'}}</text>
+</view>
+<view style='margin-top: 20rpx'>
+	<text style='white-space: pre'> 信息：</text>
+</view>
+<view class="message">
+	<view
+		class="message-text"
+		bindtap="myMessage">
+		<image
+			src='images/1.png'
+			style='width: 50rpx;height:50rpx;margin-top:25rpx;margin-right:20rpx'></image>
+		<text>我的信息</text>
+	</view>
+</view>
+<view style='margin-top: 20rpx'>
+	<text style='white-space: pre'> 文章：</text>
+</view>
+<view class="essay">
+	<view
+		class="essay-text"
+		bindtap='onSendEssay'>
+		<image
+			src='images/2.png'
+			style='width: 50rpx;height:50rpx;margin-top:25rpx;margin-right:20rpx'></image>
+		<text>发送文章</text>
+	</view>
+	<view
+		class="essay-text"
+		bindtap='myStar'>
+		<image
+			src='images/4.png'
+			style='width: 50rpx;height:50rpx;margin-top:25rpx;margin-right:20rpx'></image>
+		<text>我的收藏</text>
+	</view>
+	<view
+		class="essay-text"
+		bindtap="myEssay">
+		<image
+			src='images/3.png'
+			style='width: 50rpx;height:50rpx;margin-top:25rpx;margin-right:20rpx'></image>
+		<text>我的文章</text>
+	</view>
+</view>

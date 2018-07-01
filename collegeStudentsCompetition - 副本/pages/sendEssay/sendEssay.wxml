@@ -1,0 +1,45 @@
+<view class='content'>
+	<view style='margin-top: 20rpx'>
+		<text>标题:</text>
+	</view>
+	<view style='background-color: white;margin-top: 20rpx'>
+		<textarea
+			placeholder='输入标题：'
+			placeholder-style='color: grey'
+			style='height:100rpx;width:100%'
+			bindinput='titleChange'
+			maxlength='68'></textarea>
+	</view>
+	<view style='margin-top: 20rpx'>
+		<text>内容:</text>
+	</view>
+	<view style='background-color: white;margin-top: 20rpx'>
+		<textarea
+			maxlength='-1'
+			placeholder='输入内容：'
+			placeholder-style='color: grey'
+			style='width:100%;height:400rpx'
+			bindinput='contentChange'></textarea>
+	</view>
+	<view
+		wx:for="{{imageFilePaths}}"
+		style='margin-top: 20rpx'>
+		<image
+			mode='widthFix'
+			src='{{item}}'
+			style='width:700rpx;margin-left: 25rpx'></image>
+	</view>
+	<view
+		style='margin-top: 20rpx;display: flex;flex-direction:column;text-align:center'>
+		<text>添加图片</text>
+		<image
+			src='images/add.png'
+			style='width:80rpx;height:80rpx;margin-left: 335rpx'
+			bindtap='onAddPicture'></image>
+	</view>
+</view>
+<view class='bottom'>
+	<button
+		style='width: 100%;background-color:#eef5db'
+		bindtap='onSendEssay'>发送文章</button>
+</view>

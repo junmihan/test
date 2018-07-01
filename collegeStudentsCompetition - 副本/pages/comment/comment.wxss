@@ -1,0 +1,16 @@
+.userImage{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.commentContent{
+  margin-bottom: 100rpx;
+}
+.bottomBar{
+  height: 100rpx;
+  background: #F6F6F6;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

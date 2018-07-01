@@ -1,0 +1,28 @@
+<view
+	class='Essay'
+	wx:for="{{select}}"
+	style='border: 1px solid rgba(0, 0, 0, .1);background-color:#ffffff;margin:15rpx;border-radius: 5px'>
+	<view
+		bindtap='onDetail'
+		data-id="{{item.article_id}}">
+		<view style='flex-direction: row;display:flex'>
+			<view style='flex-direction: column;display:flex'>
+				<view
+					style='{{!item.images_url?"width:100%;font-size: 40rpx;margin-top: 20rpx;margin-left: 20rpx;margin-right: 20rpx":"width:450rpx;height:70%;font-size: 40rpx;margin-top: 20rpx;margin-left: 20rpx;margin-right: 20rpx"}}'>{{item.article_name}}</view>
+				<view
+					style='font-size: 20rpx'
+					style='{{!item.images_url?"font-size: 20rpx;margin-top: 20rpx;margin-bottom: 20rpx;margin-left: 20rpx":"font-size: 20rpx;margin-left: 20rpx"}}'>
+					<text>发布时间：{{item.post_time}}</text>
+				</view>
+			</view>
+			<image
+				style='{{!item.images_url?"height:0px;width:0px":"width:250rpx;height:200rpx;margin-top: 10rpx;margin-bottom: 10rpx;margin-right: 10rpx"}}'
+				src='{{"https://www.wexinhaohan.xyz/downloadImages?images_url="+item.images_url[0]}}'></image>
+		</view>
+	</view>
+</view>
+<view
+	wx:if='{{select.length}}'
+	style='text-align:center;font-size:30rpx'>
+	<text>没有更多了</text>
+</view>

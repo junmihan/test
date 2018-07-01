@@ -1,0 +1,61 @@
+<view
+	class='commentContent'
+	wx:for="{{comment}}"
+	style='border: 1px solid rgba(0, 0, 0, .1)'>
+	<view
+		wx:if='{{item.comment_id}}'
+		style='flex-direction: column;display: flex'
+		data-commentid='{{item.comment_id}}'
+		bindtap='onCommentDetail'>
+		<view
+			style='flex-direction: row;display: flex'
+			class='title'>
+			<image
+				class='userImage'
+				src='{{item.user_images_url}}'></image>
+			<view
+				style='flex-direction: column;width:450rpx;display: flex;margin-top: 20rpx;margin-left: 40rpx'>
+				<view style='flex-direction: row'>
+					<text style='font-size: 40rpx;color: #007AFF'>{{item.passtiveUser_name}}</text>
+					<text style='font-size: 40rpx;white-space: pre'> 回复了  </text>
+					<text style='font-size: 40rpx;color: #007AFF'>你</text>
+				</view>
+				<text style='font-size: 20rpx;color: grey'>{{item.answer_post_time}}</text>
+			</view>
+		</view>
+		<view style='margin-left: 160rpx;margin-bottom: 30rpx'>
+			<text>{{item.answer_content}}</text>
+		</view>
+	</view>
+
+	<view
+		wx:if='{{item.article_id}}'
+		style='flex-direction: column;display: flex'
+		data-essayid='{{item.article_id}}'
+		bindtap='onEssay'>
+		<view
+			style='flex-direction: row;display: flex'
+			class='title'>
+			<image
+				class='userImage'
+				src='{{item.user_images_url}}'></image>
+			<view
+				style='flex-direction: column;width:450rpx;display: flex;margin-top: 20rpx;margin-left: 40rpx'>
+				<view style='flex-direction: row'>
+					<text style='font-size: 40rpx;color: #007AFF'>{{item.passtiveUser_name}}</text>
+					<text style='font-size: 40rpx;white-space: pre'> 评论了  </text>
+					<text style='font-size: 40rpx;color: #007AFF'>你的文章</text>
+				</view>
+				<text style='font-size: 20rpx;color: grey'>{{item.answer_post_time}}</text>
+			</view>
+		</view>
+		<view style='margin-left: 160rpx;margin-bottom: 30rpx'>
+			<text>{{item.answer_content}}</text>
+		</view>
+	</view>
+</view>
+<view
+	wx:if='{{comment.length}}'
+	style='text-align:center;font-size:30rpx;margin-top:20rpx'>
+	<text>没有更多了</text>
+</view>

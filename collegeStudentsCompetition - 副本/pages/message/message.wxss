@@ -1,0 +1,6 @@
+.userImage{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}

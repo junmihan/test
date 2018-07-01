@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/personSet/personSet",
+    "pages/detail/detail",
+    "pages/message/message",
+    "pages/essay/essay",
+    "pages/star/star",
+    "pages/sendEssay/sendEssay",
+    "pages/comment/comment",
+    "pages/commentDetail/commentDetail",
+    "pages/authorization/authorization",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "首页",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#000000",
+    "selectedColor": "#c2d4d8",
+    "backgroundColor": "#FFFFFFFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "text": "信息",
+        "iconPath": "images/message.png",
+        "selectedIconPath": "images/message1.png",
+        "pagePath": "pages/index/index"
+      },
+      {
+         "text": "搜索",
+         "iconPath": "images/search.png",
+         "selectedIconPath": "images/search1.png",
+         "pagePath": "pages/search/search"
+      },
+      {
+        "text": "个人",
+        "iconPath": "images/person2.png",
+        "selectedIconPath": "images/person1.png",
+        "pagePath": "pages/personSet/personSet"
+      }
+    ]
+  }  
+}
