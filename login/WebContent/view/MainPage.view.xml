@@ -1,0 +1,73 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.MainPage"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<tnt:ToolPage
+		title="主页"
+		id="mainPage">
+		<tnt:sideContent>
+			<tnt:SideNavigation
+				id="sideNavigation"
+				selectedItem="subItemThree">
+				<tnt:item>
+					<tnt:NavigationList>
+						<tnt:NavigationListItem
+							text="学生管理"
+							icon="sap-icon://group">
+							<tnt:NavigationListItem
+								text="2017级"
+								select="onInstituteSelect" />
+							<tnt:NavigationListItem
+								text="2016级"
+								select="onInstituteSelect" />
+							<tnt:NavigationListItem
+								text="2015级"
+								select="onInstituteSelect" />
+							<tnt:NavigationListItem
+								text="2014级"
+								select="onInstituteSelect" />
+						</tnt:NavigationListItem>
+						<tnt:NavigationListItem
+							text="发送历史"
+							select="onHistorySelect"
+							icon="sap-icon://history" />
+						<tnt:NavigationListItem
+							text="个人中心"
+							select="onSettingSelect"
+							icon="sap-icon://action-settings" />
+					</tnt:NavigationList>
+				</tnt:item>
+			</tnt:SideNavigation>
+		</tnt:sideContent>
+		<tnt:mainContents>
+			<NavContainer id="navContainer">
+				<pages>
+					<Page>
+						<Text text="欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎欢迎" />
+					</Page>
+					<mvc:XMLView
+						id="managePage"
+						viewName="sap.ui.demo.walkthrough.view.managePage"
+						beforeShow="onBeforeShow" />
+					<mvc:XMLView
+						id="settingPage"
+						viewName="sap.ui.demo.walkthrough.view.Setting" />
+					<mvc:XMLView
+						id="historyPage"
+						viewName="sap.ui.demo.walkthrough.view.history" />
+					<mvc:XMLView
+						id="historyTabelPage"
+						viewName="sap.ui.demo.walkthrough.view.historyTabel" />
+					<mvc:XMLView
+						id="historyDetailPage"
+						viewName="sap.ui.demo.walkthrough.view.historyDetail" />
+				</pages>
+			</NavContainer>
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</core:View>

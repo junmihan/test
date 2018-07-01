@@ -1,0 +1,55 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	displayBlock="true">
+	<App class="myAppDemoWT" id="myApp">
+		<pages>
+			<Page title="信服登录中心">
+				<content>
+					<VBox
+						alignItems="Center"
+						justifyContent="Center">
+						<HBox>
+							<core:Icon
+								src="sap-icon://person-placeholder"
+								size="38px"
+								class="sapUiSmallMarginEnd" />
+							<Input
+								valueLiveUpdate="true"
+								id="userNameInput"
+								width="400px"
+								placeholder="请输入账号"
+								change="onUserNameChange"/>
+						</HBox>
+						<HBox>
+							<core:Icon
+								src="sap-icon://locked"
+								size="38px"
+								class="sapUiSmallMarginEnd" />
+							<Input
+								valueLiveUpdate="true"
+								width="400px"
+								id="passwordInput"
+								type="Password"
+								placeholder="请输入密码" 
+								change="onPasswordChange"/>
+						</HBox>
+						<HBox>
+							<Button
+								text="登录"
+								class="sapUiMediumMarginEnd"
+								type="Emphasized"
+								press="onlogin" />
+							<Button
+								text="重置"
+								press="onCancel" />
+						</HBox>
+					</VBox>
+				</content>
+			</Page>
+			<mvc:XMLView id="mainPage" viewName="sap.ui.demo.walkthrough.view.MainPage"/>
+		</pages>
+	</App>
+</core:View>

@@ -1,0 +1,58 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.Setting"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	displayBlock="true">
+    <App class="myAppDemoWT">
+		<pages>
+			<Page title="用户中心">
+				<content>
+					<VBox
+						alignItems="Center"
+						justifyContent="Center">
+						<HBox>
+							<Text text="新用户名:" class="sapUiSmallMargin" ></Text>
+							<Input
+								valueLiveUpdate="true"
+								id="userNameModify"
+								width="400px"
+								placeholder="请输入新账号"
+								change="onuserNameModifyChange" />
+						</HBox>
+						<HBox>
+							<Text text="新的密码:" class="sapUiSmallMargin"></Text>
+							<Input
+								valueLiveUpdate="true"
+								width="400px"
+								id="passwordModify"
+								type="Password"
+								placeholder="请输入新密码"
+								change="onpasswordModifyChange" />
+						</HBox>
+						<HBox>
+							<Text text="确认密码:" class="sapUiSmallMargin" ></Text>
+							<Input
+								valueLiveUpdate="true"
+								width="400px"
+								id="passwordInputModifyConfirm"
+								type="Password"
+								placeholder="再次输入新密码"
+								change="onpasswordInputModifyConfirmChange" />
+						</HBox>
+						<HBox>
+							<Button
+								text="确认"
+								class="sapUiMediumMarginEnd"
+								type="Emphasized"
+								press="onConfirm" />
+							<Button
+								text="重置"
+								press="onCancel" />
+						</HBox>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</core:View>

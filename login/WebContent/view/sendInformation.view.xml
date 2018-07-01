@@ -1,0 +1,56 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.sendInformation"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Title
+		text="发送信息"
+		textAlign="Center"
+		width="100%"
+		class="sapUiLargeMarginBottom sapUiSmallMarginTop" />
+	<FlexBox
+		alignItems="Center"
+		justifyContent="Center"
+		width="100%">
+		<l:VerticalLayout width="100%">
+			<Text text="标题:" />
+			<Input
+				id="title"
+				width="800PX"
+				class="sapUiSmallMarginBottom"
+				placeholder="请输入标题" />
+		</l:VerticalLayout>
+	</FlexBox>
+	<FlexBox
+		alignItems="Center"
+		justifyContent="Center"
+		width="100%">
+		<l:VerticalLayout width="100%">
+			<Text text="内容:" />
+			<TextArea
+				id="content"
+				width="800PX"
+				rows="12"
+				class="sapUiSmallMarginBottom"
+				placeholder="请输入内容" />
+		</l:VerticalLayout>
+	</FlexBox>
+	<FlexBox
+		alignItems="Center"
+		justifyContent="Center"
+		width="100%">
+		<Button
+			text="发送"
+			class="sapUiLargeMarginEnd"
+			press="onSend" />
+		<Button
+			text="取消"
+			class="sapUiLargeMarginStart"
+			press="onCanel" />
+	</FlexBox>
+</core:View>

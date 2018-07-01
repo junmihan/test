@@ -1,0 +1,18 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.sendTabel"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Title
+		text="发送表单"
+		textAlign="Center"
+		width="100%"
+		class="sapUiLargeMarginBottom sapUiSmallMarginTop" />
+
+
+</core:View>

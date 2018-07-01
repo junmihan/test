@@ -1,0 +1,48 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.detail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Page
+		title="详细信息"
+		backgroundDesign="Solid"
+		class="sapUiContentPadding">
+		<content>
+			<VBox
+				alignItems="Strart"
+				justifyContent="Strart">
+				<Text
+					text="学号: {/studentId}"
+					class="sapUiTinyMarginTopBottom" />
+				<Text
+					text="姓名: {/name}"
+					class="sapUiTinyMarginTopBottom" />
+				<Text
+					text="学院: {/college}"
+					class="sapUiTinyMarginTopBottom" />
+				<Text
+					text="专业: {/major}"
+					class="sapUiTinyMarginTopBottom" />
+				<Text
+					text="联系电话: {/phoneNumber}"
+					class="sapUiTinyMarginTopBottom" />
+				<Text
+					text="标签: {/label}"
+					class="sapUiTinyMarginTopBottom" />
+				<HBox>
+					<Button
+						text="修改"
+						press="onChangeDetailInformation"
+						class="sapUiSmallMarginEnd" />
+					<Button
+						text="返回"
+						press="onReturnToManagePage" />
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</core:View>

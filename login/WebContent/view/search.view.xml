@@ -1,0 +1,88 @@
+<mvc:View
+	controllerName="sap.ui.demo.walkthrough.controller.search"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns="sap.m">
+	<VBox
+		alignItems="Center"
+		justifyContent="Center">
+		<Text
+			text="搜索内容"
+			class="sapUiLargeMarginTop" />
+		<FlexBox
+			alignItems="Start"
+			justifyContent="Start"
+			width="100%">
+			<items>
+				<Button
+					text="选择所有"
+					press="onSelectAllSearch"
+					id="SelectAllSearch"
+					enabled="false">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Button>
+				<Button
+					text="取消全选"
+					press="onCancelAllSearch"
+					id="CancelAllSearch"
+					enabled="false">
+					<layoutData>
+						<FlexItemData growFactor="1" />
+					</layoutData>
+				</Button>
+				<Button
+					text="删除标签"
+					press="onDeleteLabelConfirm"
+					id="DeleteLabel"
+					enabled="false">
+					<layoutData>
+						<FlexItemData growFactor="15" />
+					</layoutData>
+				</Button>
+			</items>
+		</FlexBox>
+	</VBox>
+
+	<List
+		id="searchList"
+		class="sapUiResponsiveMargin"
+		width="auto"
+		items="{/content}">
+		<CustomListItem>
+			<FlexBox
+				alignItems="Start"
+				justifyContent="Start"
+				width="100%">
+				<items>
+					<CheckBox
+						selected="{flag}"
+						select="onselect">
+						<layoutData>
+							<FlexItemData growFactor="1" />
+						</layoutData>
+					</CheckBox>
+					<VBox>
+						<Text
+							text="{Text}"
+							id="Input"
+							class="sapUiSmallMarginTop" />
+						<Text text="{Label}" />
+						<layoutData>
+							<FlexItemData growFactor="100" />
+						</layoutData>
+					</VBox>
+					<Button
+						text="详细信息"
+						class="sapUiSmallMarginEnd"
+						press="onDetailInformation">
+						<layoutData>
+							<FlexItemData growFactor="5" />
+						</layoutData>
+					</Button>
+				</items>
+			</FlexBox>
+		</CustomListItem>
+	</List>
+</mvc:View>

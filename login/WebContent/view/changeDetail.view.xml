@@ -1,0 +1,80 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.changeDetail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Page
+		title="详细信息"
+		backgroundDesign="Solid"
+		class="sapUiContentPadding">
+		<content>
+			<VBox
+				alignItems="Strart"
+				justifyContent="Strart">
+				<HBox>
+					<Text
+						text="学号: "
+						class="sapUiSmallMarginTop sapUiSmallMarginEnd" />
+					<Input
+						id="inputStuId"
+						valueLiveUpdate="true"
+						width="400px"
+						value="{/studentId}" />
+				</HBox>
+				<HBox>
+					<Text
+						text="姓名: "
+						class="sapUiSmallMarginTop sapUiSmallMarginEnd" />
+					<Input
+						id="inputStuName"
+						valueLiveUpdate="true"
+						width="400px"
+						value="{/name}" />
+				</HBox>
+				<HBox>
+					<Text
+						text="学院: "
+						class="sapUiSmallMarginTop sapUiSmallMarginEnd" />
+					<Input
+						id="inputStuCollege"
+						valueLiveUpdate="true"
+						width="400px"
+						value="{/college}" />
+				</HBox>
+				<HBox>
+					<Text
+						text="专业: "
+						class="sapUiSmallMarginTop sapUiSmallMarginEnd" />
+					<Input
+						id="inputStuMajor"
+						valueLiveUpdate="true"
+						width="400px"
+						value="{/major}" />
+				</HBox>
+				<HBox>
+					<Text
+						text="联系电话: "
+						class="sapUiSmallMarginTop sapUiSmallMarginEnd" />
+					<Input
+						id="inputStuPhoneNumber"
+						valueLiveUpdate="true"
+						width="400px"
+						value="{/phoneNumber}" />
+				</HBox>
+				<HBox>
+					<Button
+						text="确认修改"
+						press="onChangeDetailInformation"
+						class="sapUiSmallMarginEnd" />
+					<Button
+						text="返回"
+						press="onReturnToManagePage" />
+				</HBox>
+			</VBox>
+		</content>
+	</Page>
+</core:View>

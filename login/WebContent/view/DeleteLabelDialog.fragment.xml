@@ -1,0 +1,19 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		title="确认"
+		type="Message">
+		<content>
+			<Text text="确认删除标签？" />
+		</content>
+		<beginButton>
+			<Button text="确认"
+				press="onDeleteLabelDialogOk" />
+		</beginButton>
+		<endButton>
+			<Button text="取消"
+				press="onDeleteLabelDialogEnd" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,62 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.historyDetail"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Page
+		title="详细情况"
+		backgroundDesign="Solid"
+		class="sapUiContentPadding"
+		showNavButton="true"
+		navButtonPress="onBack">
+		<FlexBox
+			lignItems="Center"
+			justifyContent="Center"
+			width="100%">
+			<VBox>
+				<VBox>
+					<Text text="标题:" />
+					<Text text="{/title}" />
+				</VBox>
+				<VBox>
+					<Text text="内容:" />
+					<Text text="{/content}" />
+				</VBox>
+			</VBox>
+		</FlexBox>
+		<FlexBox
+			lignItems="Center"
+			justifyContent="Center"
+			width="100%">
+			<Button
+				text="未收到"
+				class="sapUiLargeMarginEnd"
+				press="onNotReceive" />
+			<Button
+				text="已收到"
+				press="onReceive" />
+		</FlexBox>
+		<List
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{/choose}">
+			<CustomListItem>
+				<FlexBox
+					lignItems="Start"
+					justifyContent="Start"
+					width="100%">
+					<items>
+						<VBox class="sapUiTinyMarginTop sapUiTinyMarginEnd">
+							<Text text="{Text}" />
+							<Text text="{Label}" />
+						</VBox>
+					</items>
+				</FlexBox>
+			</CustomListItem>
+		</List>
+	</Page>
+</core:View>

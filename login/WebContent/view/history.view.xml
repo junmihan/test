@@ -1,0 +1,65 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.history"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Page
+		title="历史信息"
+		backgroundDesign="Solid"
+		class="sapUiContentPadding">
+		<FlexBox
+			lignItems="Center"
+			justifyContent="Center"
+			width="100%">
+			<HBox>
+				<Button
+					text="历史信息"
+					class="sapUiLargeMarginEnd"
+					enabled="false" />
+				<Button
+					text="历史表单"
+					press="toHistoryTabelPage" />
+			</HBox>
+		</FlexBox>
+		<List
+			class="sapUiResponsiveMargin"
+			width="auto"
+			items="{/history}">
+			<CustomListItem>
+				<FlexBox
+					lignItems="Start"
+					justifyContent="SpaceBetween"
+					width="100%">
+					<items>
+						<HBox>
+							<CheckBox
+								selected="{flag}"
+								enabled="false" />
+							<VBox class="sapUiTinyMarginTop">
+								<Text text="标题" />
+								<Text text="{title}" />
+							</VBox>
+						</HBox>
+						<HBox>
+							<VBox class="sapUiTinyMarginTop sapUiTinyMarginEnd">
+								<Text text="接收人数" />
+								<Text text="{numOfReceive}/{allNum}" />
+							</VBox>
+							<VBox class="sapUiTinyMarginTop sapUiSmallMarginEnd">
+								<Text text="时间" />
+								<Text text="{time}" />
+							</VBox>
+							<Button
+								text="详细信息"
+								press="onDetailReceiveCondition" />
+						</HBox>
+					</items>
+				</FlexBox>
+			</CustomListItem>
+		</List>
+	</Page>
+</core:View>

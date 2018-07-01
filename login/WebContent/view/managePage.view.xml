@@ -1,0 +1,154 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.Management"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<NavContainer id="managePage">
+		<pages>
+			<Page
+				id="mainManagePage"
+				title="学生管理"
+				backgroundDesign="Solid"
+				class="sapUiContentPadding">
+				<FlexBox
+					alignItems="Start"
+					justifyContent="Start"
+					width="100%">
+					<items>
+						<Button
+							press="onSelectAll"
+							text="选择所有">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Button>
+						<Button
+							press="onCancelAll"
+							text="取消全选">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Button>
+						<Button
+							press="onSelectSelected"
+							text="查看已选">
+							<layoutData>
+								<FlexItemData growFactor="1" />
+							</layoutData>
+						</Button>
+						<MenuButton
+							text="按标签搜索"
+							buttonMode="Split">
+							<menu>
+								<Menu
+									itemSelected="onMenuSelectAction"
+									items="{/Label}">
+									<items>
+										<MenuItem text="{}" />
+									</items>
+								</Menu>
+							</menu>
+							<layoutData>
+								<FlexItemData growFactor="10" />
+							</layoutData>
+						</MenuButton>
+						<SearchField
+							liveChange="onSearch"
+							width="100%">
+							<layoutData>
+								<FlexItemData growFactor="10" />
+							</layoutData>
+						</SearchField>
+					</items>
+				</FlexBox>
+				<content id="content">
+					<Tree
+						id="Tree"
+						items="{/}">
+						<CustomTreeItem>
+							<FlexBox
+								alignItems="Start"
+								justifyContent="Start"
+								width="100%">
+								<items>
+									<CheckBox
+										id="Select"
+										selected="{flag}"
+										select="onClickBox">
+										<layoutData>
+											<FlexItemData growFactor="1" />
+										</layoutData>
+									</CheckBox>
+									<VBox>
+										<Text
+											text="{Text}"
+											id="Input"
+											class="sapUiSmallMarginTop" />
+										<Text text="{Label}" />
+										<layoutData>
+											<FlexItemData growFactor="100" />
+										</layoutData>
+									</VBox>
+									<Button
+										id="Inquire"
+										press="onSearchStudent"
+										text="详细信息"
+										class="sapUiSmallMarginEnd">
+										<layoutData>
+											<FlexItemData growFactor="5" />
+										</layoutData>
+									</Button>
+								</items>
+							</FlexBox>
+						</CustomTreeItem>
+					</Tree>
+				</content>
+				<content>
+					<mvc:XMLView
+						id="searchPage"
+						viewName="sap.ui.demo.walkthrough.view.search" />
+				</content>
+				<footer>
+					<Toolbar>
+						<ToolbarSpacer />
+						<Button
+							type="Accept"
+							text="添加标签"
+							press="onAddLabel"
+							class="sapUiLargeMarginEnd" />
+						<MenuButton
+							text="发送信息"
+							type="Accept"
+							buttonMode="Split"
+							class="sapUiLargeMarginEnd">
+							<menu>
+								<Menu itemSelected="onSendMessage">
+									<items>
+										<MenuItem text="发送信息" />
+										<MenuItem text="发送表单" />
+									</items>
+								</Menu>
+							</menu>
+						</MenuButton>
+					</Toolbar>
+				</footer>
+			</Page>
+			<mvc:XMLView
+				id="studentDetailMessage"
+				viewName="sap.ui.demo.walkthrough.view.detail" />
+			<mvc:XMLView
+				id="changeStudentDetailMessage"
+				viewName="sap.ui.demo.walkthrough.view.changeDetail" />
+			<mvc:XMLView
+				id="sendStudentInformation"
+				viewName="sap.ui.demo.walkthrough.view.sendInformation" />
+			<mvc:XMLView
+				id="sendStudentTabel"
+				viewName="sap.ui.demo.walkthrough.view.sendTabel" />		
+		</pages>
+	</NavContainer>
+</core:View>

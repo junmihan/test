@@ -1,0 +1,29 @@
+<core:View
+	controllerName="sap.ui.demo.walkthrough.controller.historyTabel"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+	height="100%"
+	xmlns:html="http://www.w3.org/1999/xhtml"
+	displayBlock="true">
+	<Page
+		title="历史信息"
+		backgroundDesign="Solid"
+		class="sapUiContentPadding">
+		<FlexBox
+			lignItems="Center"
+			justifyContent="Center"
+			width="100%">
+			<HBox>
+				<Button
+					text="历史信息"
+					class="sapUiLargeMarginEnd"
+					press="onHistoryPage" />
+				<Button
+					text="历史表单"
+					enabled="false" />
+			</HBox>
+		</FlexBox>
+	</Page>
+</core:View>

@@ -1,0 +1,29 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		title="添加标签"
+		type="Message">
+		<content>
+			<Label
+				text="请选择要添加的标签:"
+				labelFor="submitDialogTextarea" />
+			<TextArea
+				id="submitDialogTextarea"
+				liveChange="addLabelDialogTextArea"
+				width="100%"
+				placeholder="填写要添加的标签（必填）" />
+		</content>
+		<beginButton>
+			<Button
+				text="确认"
+				enabled="false"
+				press="onAddLabelDialogOk" />
+		</beginButton>
+		<endButton>
+			<Button
+				text="取消"
+				press="onAddLabelDialogEnd" />
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
